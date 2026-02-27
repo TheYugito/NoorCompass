@@ -1,82 +1,303 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NoorCompass - Legal</title>
+    <title>DuaLearn — Learn Islamic Duas | by NoorCompass</title>
+    <meta name="description" content="Learn and memorize Islamic duas and surahs with DuaLearn. A beautiful, gamified app for daily spiritual growth.">
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
-            color: #333;
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --teal:       #2d5f5d;
+            --teal-light: #3d7a78;
+            --mint:       #7ec4a6;
+            --mint-light: #a8d8c4;
+            --bg:         #f8fffe;
+            --white:      #ffffff;
+            --text:       #1a2e2d;
+            --text-muted: #5a7a78;
         }
-        .header {
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* ── Nav ── */
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 40px;
+            background: var(--white);
+            border-bottom: 1px solid rgba(126,196,166,0.25);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-brand {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--teal);
+            letter-spacing: -0.3px;
+        }
+        .nav-link {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-link:hover { color: var(--teal); }
+
+        /* ── Hero ── */
+        .hero {
             text-align: center;
-            padding: 40px 0;
-            border-bottom: 2px solid #008B8B;
+            padding: 72px 24px 64px;
+            background: linear-gradient(160deg, var(--white) 0%, #edf7f4 100%);
+        }
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 26px;
+            box-shadow: 0 12px 40px rgba(45,95,93,0.22), 0 2px 8px rgba(45,95,93,0.12);
+            margin-bottom: 28px;
+        }
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            color: var(--teal);
+            letter-spacing: -1px;
+            line-height: 1.15;
+        }
+        .hero .by-line {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-top: 6px;
+            font-weight: 500;
+        }
+        .hero .tagline {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin: 20px auto 0;
+            max-width: 480px;
+            line-height: 1.65;
+        }
+
+        /* ── Store Badges ── */
+        .badges {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 36px;
+        }
+        .badge-link {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+        .badge-link:hover { transform: translateY(-2px); opacity: 0.9; }
+        .badge-apple {
+            height: 48px;
+            width: auto;
+        }
+        .badge-google {
+            height: 72px;
+            width: auto;
+            margin: -12px 0; /* Google badge has more whitespace built in */
+        }
+
+        /* ── Divider ── */
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--mint-light), transparent);
+            margin: 0 40px;
+        }
+
+        /* ── Features ── */
+        .features {
+            padding: 60px 24px;
+            max-width: 860px;
+            margin: 0 auto;
+        }
+        .features h2 {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--teal);
             margin-bottom: 40px;
         }
-        .logo {
-            font-size: 2em;
-            color: #008B8B;
-            font-weight: bold;
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
         }
-        .nav {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin: 30px 0;
-        }
-        .nav a {
-            color: #008B8B;
-            text-decoration: none;
-            padding: 10px 20px;
-            border: 2px solid #008B8B;
-            border-radius: 25px;
-            transition: all 0.3s;
-        }
-        .nav a:hover {
-            background: #008B8B;
-            color: white;
-        }
-        .app-section {
-            margin: 40px 0;
-            padding: 20px;
-            border-left: 4px solid #008B8B;
-            background: #f9f9f9;
-        }
-        h1 { color: #008B8B; }
-        h2 { color: #006666; }
-        .footer {
+        .feature-card {
+            background: var(--white);
+            border: 1px solid rgba(126,196,166,0.3);
+            border-radius: 16px;
+            padding: 28px 20px;
             text-align: center;
-            margin-top: 60px;
-            padding-top: 30px;
-            border-top: 1px solid #ddd;
-            color: #666;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .feature-card:hover {
+            box-shadow: 0 8px 24px rgba(45,95,93,0.1);
+            transform: translateY(-3px);
+        }
+        .feature-emoji {
+            font-size: 2rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+        .feature-title {
+            font-size: 0.975rem;
+            font-weight: 700;
+            color: var(--teal);
+            margin-bottom: 8px;
+        }
+        .feature-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.55;
+        }
+
+        /* ── Legal ── */
+        .legal {
+            padding: 24px 24px 60px;
+            max-width: 860px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .legal h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .legal-card {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 28px;
+            background: var(--white);
+            border: 1.5px solid rgba(126,196,166,0.4);
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--teal);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+        }
+        .legal-card:hover {
+            background: #edf7f4;
+            border-color: var(--mint);
+            box-shadow: 0 4px 12px rgba(45,95,93,0.1);
+        }
+        .legal-card svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+
+        /* ── Footer ── */
+        footer {
+            text-align: center;
+            padding: 28px 24px;
+            border-top: 1px solid rgba(126,196,166,0.25);
+            background: var(--white);
+        }
+        footer p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        footer a {
+            color: var(--teal);
+            text-decoration: none;
+        }
+        footer a:hover { text-decoration: underline; }
+
+        /* ── Responsive ── */
+        @media (max-width: 640px) {
+            nav { padding: 14px 20px; }
+            .hero { padding: 52px 20px 48px; }
+            .hero h1 { font-size: 2rem; }
+            .app-icon { width: 96px; height: 96px; border-radius: 20px; }
+            .features-grid { grid-template-columns: 1fr; }
+            .features { padding: 44px 20px; }
+            .section-divider { margin: 0 20px; }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="logo">NoorCompass</div>
-        <p>Legal Documents & Policies</p>
-    </div>
 
-    <div class="app-section">
-        <h2>DuaLearn</h2>
-        <p>Gamified dua & surah memorization app</p>
-        <ul>
-            <li><a href="dualearn-privacy.html">Privacy Policy</a></li>
-        </ul>
-    </div>
+    <nav>
+        <span class="nav-brand">NoorCompass</span>
+        <a href="dualearn-privacy.html" class="nav-link">Privacy Policy</a>
+    </nav>
 
-    <div class="footer">
-        <p>&copy; 2026 NoorCompass. All rights reserved.</p>
-        <p>Contact: nuurcompass@gmail.com</p>
-    </div>
+    <section class="hero">
+        <img src="images/app_icon_play_store.png" alt="DuaLearn app icon" class="app-icon">
+        <h1>DuaLearn</h1>
+        <p class="by-line">by NoorCompass</p>
+        <p class="tagline">Learn and memorize Islamic duas and surahs through a beautiful, gamified experience designed for daily spiritual growth.</p>
+
+        <div class="badges">
+            <a href="https://apps.apple.com/us/app/dualearn/id6756082504" target="_blank" rel="noopener" class="badge-link" aria-label="Download on the App Store">
+                <img class="badge-apple"
+                     src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg"
+                     alt="Download on the App Store">
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.dualearn.app" target="_blank" rel="noopener" class="badge-link" aria-label="Get it on Google Play">
+                <img class="badge-google"
+                     src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                     alt="Get it on Google Play">
+            </a>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section class="features">
+        <h2>Everything you need to grow spiritually</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <span class="feature-emoji">🌿</span>
+                <p class="feature-title">Garden of Duas</p>
+                <p class="feature-desc">Watch your personal spiritual garden bloom as you learn and master each dua and surah.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-emoji">📿</span>
+                <p class="feature-title">Dhikr Counter</p>
+                <p class="feature-desc">Count your daily dhikr with a beautiful tap counter, complete with hadith references and progress tracking.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-emoji">🔔</span>
+                <p class="feature-title">Daily Reminders</p>
+                <p class="feature-desc">Stay consistent with customizable reminders, streak tracking, and Noor points to keep you motivated every day.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section class="legal">
+        <h2>Legal</h2>
+        <a href="dualearn-privacy.html" class="legal-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            Privacy Policy
+        </a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 NoorCompass &nbsp;·&nbsp; <a href="mailto:nuurcompass@gmail.com">nuurcompass@gmail.com</a></p>
+    </footer>
+
 </body>
 </html>

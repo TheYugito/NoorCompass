@@ -25,7 +25,7 @@
 </head>
 <body>
     <h1>Privacy Policy for Whirldrop</h1>
-    <p class="last-updated"><strong>Last updated:</strong> 4 June 2026</p>
+    <p class="last-updated"><strong>Last updated:</strong> 13 July 2026</p>
 
     <div class="section">
         <p>Whirldrop is a casual board game (a drop-and-connect game with rotating
@@ -34,31 +34,36 @@
     </div>
 
     <div class="important">
-        <p>No email or personal identity required. No in-app purchases. We show
-        ads via Google AdMob (see section 6).</p>
+        <p>No real name or email is required. Email sign-in is optional and is
+        used only when you choose to save progress across devices. There are no
+        in-app purchases. We show ads via Google AdMob (see section 6).</p>
     </div>
 
     <div class="section">
         <h2>1. What We Store</h2>
-        <p><strong>On your device (offline modes):</strong> your settings (sound,
-        haptics, theme, language, board rules) and local play statistics (games,
-        wins, draws, points). This never leaves your device for local or
-        play-vs-computer games.</p>
-        <p><strong>In the cloud (only when you use online features):</strong> to
-        enable online multiplayer and rankings we use <strong>Google Firebase</strong>
-        (Anonymous Authentication + Cloud Firestore). The first time you use an
-        online/account feature we create an <strong>anonymous account</strong> — a
-        random identifier with <strong>no email, name, or personal
-        information</strong>. Linked to that identifier we store:</p>
+        <p><strong>On your device:</strong> your settings (sound, haptics, theme,
+        language and board rules), local play statistics, points, coins,
+        challenge progress and unlocked cosmetics. These remain on your device
+        unless you later use a leaderboard, online or account feature, at which
+        point eligible progress is synchronised as described below.</p>
+        <p><strong>In the cloud (when you use leaderboard, online or account
+        features):</strong> we use <strong>Google Firebase</strong> (Anonymous
+        Authentication + Cloud Firestore). We create an anonymous account with
+        a random identifier. Linked to that identifier we may store:</p>
         <ul>
             <li>a <strong>username</strong> you choose (a display name shown to
             opponents and on rankings — please don't use your real name or any
             personal information);</li>
-            <li>your <strong>ranking points and win/draw counts</strong>;</li>
+            <li>your country or region choice, ranking points, coin
+            earning/spending counters, unlocked cosmetics and equipped
+            cosmetic;</li>
+            <li>account creation and last-active timestamps used for account
+            maintenance and online availability;</li>
             <li>while an online match is live: the match's rules and the
             <strong>moves played</strong> (column numbers), plus a periodic
             "still connected" timestamp used to detect when a player leaves or
-            loses connection;</li>
+            loses connection. Match records also contain the participating
+            anonymous account identifiers and display names;</li>
             <li><strong>optional email sign-in:</strong> if you choose to sign in
             with an email and password (purely to save and restore your progress
             across devices), we store your <strong>email address</strong> linked
@@ -66,23 +71,32 @@
             we never see or store it). This is entirely optional — the game works
             fully without it.</li>
         </ul>
-        <p>This data is processed on Google's servers under Google's terms. We do
-        not sell data or share it with advertisers.</p>
+        <p><strong>Reliability and abuse prevention:</strong> Firebase
+        Crashlytics may receive crash diagnostics such as device/app version,
+        stack traces and technical identifiers. Firebase App Check uses device
+        attestation signals to help reject automated abuse. We do not use these
+        services to build advertising profiles.</p>
+        <p>This data is processed on Google's servers under Google's terms. We
+        do not sell it. Advertising data is handled separately by AdMob as
+        described in section 6.</p>
     </div>
 
     <div class="section">
         <h2>2. What We Do Not Collect</h2>
         <p>No phone number, real name, contacts, location, or photos. We don't
         require an email — one is stored only if you opt in to email sign-in
-        (section 1). We run no analytics of our own. (Our ad provider, Google
+        (section 1). We run no behavioural analytics of our own. Crash
+        diagnostics are described in section 1. (Our ad provider, Google
         AdMob, may access a device advertising identifier to serve and measure
         ads — see section 6.)</p>
     </div>
 
     <div class="section">
         <h2>3. Permissions</h2>
-        <p>The app uses Internet access only for the optional online features
-        above. Two players on one device and play-vs-computer work fully offline.</p>
+        <p>The app uses Internet access for the optional cloud features and ads
+        described above. Two players on one device and play-vs-computer remain
+        available when cloud services are unavailable. If you opt into the
+        daily-reward reminder, the app also requests notification permission.</p>
     </div>
 
     <div class="section">
@@ -97,11 +111,13 @@
         <h2>5. Data Deletion</h2>
         <p>You can delete your account and its cloud data at any time, directly
         in the app: <strong>Profile &rarr; Delete account</strong>. This
-        permanently removes your profile (username, ranking points, win/draw
-        counts) and your leaderboard entry, and deletes the underlying
-        authentication account (including a linked email, if any). The action is
-        immediate and cannot be undone. Alternatively, you may request deletion
-        by contacting us (section 8) with your in-app username and approximate
+        removes your profile, username, ranking data, coin counters, cosmetics
+        and leaderboard entry, and deletes the underlying authentication account
+        (including a linked email, if any). Short-lived match records are
+        normally deleted when a match finishes or by automated retention; they
+        and service backups/logs may take additional time to disappear. Account
+        deletion cannot be undone. Alternatively, you may request deletion by
+        contacting us (section 8) with your in-app username and approximate
         creation date.</p>
     </div>
 
@@ -109,7 +125,8 @@
         <h2>6. Advertising</h2>
         <p>Whirldrop shows ads through <strong>Google AdMob</strong>: a full-screen
         (interstitial) ad after some online games, and an optional
-        <strong>rewarded</strong> ad you can choose to watch to earn points. AdMob
+        <strong>rewarded</strong> ad you can choose to watch to earn ranking
+        points and coins. AdMob
         is a Google service that may collect and use a device advertising
         identifier and related data to serve and measure ads, under
         <a href="https://policies.google.com/technologies/partner-sites">Google's

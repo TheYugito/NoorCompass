@@ -179,6 +179,19 @@
             color: var(--text-muted);
             margin-bottom: 20px;
         }
+        .legal-group {
+            margin-top: 28px;
+        }
+        .legal-group h3 {
+            margin-bottom: 14px;
+            color: var(--teal);
+        }
+        .legal-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
         .legal-card {
             display: inline-flex;
             align-items: center;
@@ -290,13 +303,22 @@
     <div class="section-divider"></div>
 
     <section class="legal">
-        <h2>Legal</h2>
-        <a href="dualearn-privacy.html" class="legal-card">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
-            Privacy Policy
-        </a>
+        <h2>Apps, support &amp; legal</h2>
+        <div class="legal-group">
+            <h3>DuaLearn</h3>
+            <div class="legal-links">
+                <a href="dualearn-privacy.html" class="legal-card">Privacy Policy</a>
+            </div>
+        </div>
+        <div class="legal-group">
+            <h3>StrayFinder</h3>
+            <div class="legal-links">
+                <a href="strayfinder-support.html" class="legal-card">Support</a>
+                <a href="strayfinder-privacy.html" class="legal-card">Privacy Policy</a>
+                <a href="strayfinder-terms.html" class="legal-card">Terms of Service</a>
+                <a href="strayfinder-account-deletion.html" class="legal-card">Account deletion</a>
+            </div>
+        </div>
     </section>
 
     <footer>

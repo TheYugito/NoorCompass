@@ -178,6 +178,7 @@ h1 {
 .strayfinder .feature-list li::before { background: var(--mint); }
 .strayfinder .feature-list li::before { background: #2f9b52; }
 .store-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: auto; }
+.whirldrop .store-row,
 .dualearn .store-row {
     width: 100%;
     align-self: center;
@@ -186,11 +187,6 @@ h1 {
     justify-content: center;
     align-items: center;
     gap: 8px;
-}
-.whirldrop .store-row {
-    width: 100%;
-    align-self: center;
-    justify-content: center;
 }
 .store-badge { display: inline-flex; align-items: center; transition: transform .18s ease, opacity .18s ease; }
 .store-badge:hover { transform: translateY(-2px); opacity: .9; }

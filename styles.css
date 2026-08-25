@@ -187,6 +187,11 @@ h1 {
     align-items: center;
     gap: 8px;
 }
+.whirldrop .store-row {
+    width: 100%;
+    align-self: center;
+    justify-content: center;
+}
 .store-badge { display: inline-flex; align-items: center; transition: transform .18s ease, opacity .18s ease; }
 .store-badge:hover { transform: translateY(-2px); opacity: .9; }
 .store-badge img { width: auto; height: 44px; }

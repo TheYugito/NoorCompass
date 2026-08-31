@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Download Whirldrop for iPhone, iPad or Android.">
+    <meta name="theme-color" content="#0d1532">
+    <meta property="og:title" content="Download Whirldrop">
+    <meta property="og:description" content="Play Whirldrop — the drop-and-connect game where the board spins.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.noorcompass.com/whirldrop-download/">
+    <link rel="canonical" href="https://www.noorcompass.com/whirldrop-download/">
+    <title>Download Whirldrop</title>
+    <link rel="icon" href="/whirldrop-icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="/whirldrop-icon.png">
+    <link rel="stylesheet" href="/styles.css">
+    <script>
+        (() => {
+            const appleUrl = 'https://apps.apple.com/app/id6782831281';
+            const googleUrl = 'https://play.google.com/store/apps/details?id=com.noorcompass.whirldrop';
+            const userAgent = navigator.userAgent || navigator.vendor || '';
+            const isIPadOS = navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1;
+
+            if (/Android/i.test(userAgent)) {
+                window.location.replace(googleUrl);
+            } else if (/iPad|iPhone|iPod/i.test(userAgent) || isIPadOS) {
+                window.location.replace(appleUrl);
+            }
+        })();
+    </script>
+</head>
+<body class="document-page theme-whirldrop">
+<header class="site-header">
+    <nav class="nav shell" aria-label="Main navigation">
+        <a class="brand" href="/index.html">NoorCompass</a>
+        <div class="nav-links">
+            <a href="/index.html#apps">Apps</a>
+            <a href="/whirldrop-support.html">Support</a>
+        </div>
+    </nav>
+</header>
+<main class="document-main">
+    <section class="card download-card" aria-labelledby="download-title">
+        <img src="/whirldrop-icon.png" alt="Whirldrop app icon" class="brand-icon">
+        <h1 id="download-title">Get Whirldrop</h1>
+        <p>Drop discs, connect a line and plan for the moment the board spins.</p>
+        <div class="download-actions" aria-label="Choose your app store">
+            <a class="button" href="https://apps.apple.com/app/id6782831281">Download on the App Store</a>
+            <a class="button" href="https://play.google.com/store/apps/details?id=com.noorcompass.whirldrop">Get it on Google Play</a>
+        </div>
+        <p class="download-note">On a supported phone or tablet, you should be sent to the correct store automatically.</p>
+    </section>
+</main>
+</body>
+</html>

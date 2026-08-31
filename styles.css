@@ -319,6 +319,32 @@ footer { padding: 28px 0 38px; border-top: 1px solid var(--line); }
     box-shadow: 0 8px 20px rgba(27, 38, 78, .16);
 }
 .document-main .button:hover { transform: translateY(-1px); }
+.download-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 24px 0;
+}
+.download-card {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+}
+.download-card .brand-icon {
+    margin: 0 auto 24px;
+}
+.download-card h1 {
+    margin-right: auto;
+    margin-left: auto;
+}
+.download-card .download-actions {
+    justify-content: center;
+}
+.download-note {
+    margin-top: 18px;
+    color: var(--muted) !important;
+    font-size: .9rem;
+}
 .document-main footer {
     margin-top: 58px;
     padding: 24px 0 0;

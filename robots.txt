@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /og-image.html
 
-Sitemap: https://www.noorcompass.com/sitemap.xml
+Sitemap: https://noorcompass.com/sitemap.xml

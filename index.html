@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Discover NoorCompass apps for learning, play and everyday progress, including DuaLearn, Whirldrop and StrayFinder.">
-    <meta name="theme-color" content="#0d1532">
+    <meta name="theme-color" content="#f7f5ed">
     <meta property="og:title" content="NoorCompass — Apps for learning and play">
     <meta property="og:description" content="Thoughtful apps for learning, play and everyday progress.">
     <meta property="og:type" content="website">
@@ -15,37 +15,47 @@
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <title>NoorCompass — Apps for learning and play</title>
-    <link rel="icon" href="app_icon.png" type="image/png">
-    <link rel="apple-touch-icon" href="app_icon.png">
+    <script src="theme.js"></script>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/favicon.ico?v=2" sizes="16x16 32x32 48x48">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2">
 </head>
-<body>
+<body class="home-page">
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
         <nav class="nav shell" aria-label="Main navigation">
-            <a class="brand" href="index.html">NoorCompass</a>
+            <a class="brand" href="index.html"><img class="site-logo" src="noorcompass-logo-final.png" width="40" height="48" alt="">NoorCompass</a>
             <div class="nav-links">
                 <a href="#apps">Apps</a>
                 <a href="#about">About</a>
                 <a href="#support">Support</a>
             </div>
+            <button class="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false" hidden><span class="theme-moon" aria-hidden="true">☾</span><span class="theme-sun" aria-hidden="true">☀</span></button>
         </nav>
     </header>
 
-    <main>
+    <main id="main">
         <section class="hero">
             <div class="hero-layout shell">
                 <div class="hero-copy">
-                    <p class="eyebrow">Apps by NoorCompass</p>
-                    <h1>Learn something. Play something.</h1>
-                    <p>Thoughtful mobile apps made to be easy to start, enjoyable to use and worth coming back to.</p>
+                    <p class="eyebrow">Independent apps. Everyday discoveries.</p>
+                    <h1>A little curiosity.<br>A brighter <em>path.</em></h1>
+                    <p>Make room for a moment of learning, a clever little game, or a good deed. Thoughtful apps to take with you.</p>
+                    <a class="explore-link" href="#apps">Find your next app <span aria-hidden="true">↗</span></a>
+                    <div class="hero-note"><span aria-hidden="true">✦</span> Made with care. For wherever life takes you.</div>
                 </div>
-
+                <div class="hero-art" aria-label="A winding green path leading to a golden star">
+                    <img class="hero-mark" src="noorcompass-logo-final.png" alt="" width="1254" height="1254">
+                    <span class="path-caption">A little light to guide the way.</span>
+                </div>
             </div>
         </section>
 
         <section class="section shell" id="apps" aria-labelledby="apps-title">
             <div class="section-heading">
-                <div><p class="eyebrow">Our apps</p><h2 id="apps-title">Three different experiences, made with the same care.</h2></div>
+                <div><p class="eyebrow">01 / Explore our apps</p><h2 id="apps-title">Follow your curiosity.</h2></div>
                 <p>Build a daily learning practice, play a strategy game that changes with every turn, or help animals reach safety.</p>
             </div>
 
@@ -126,7 +136,7 @@
         <section class="section values shell" id="about" aria-labelledby="about-title">
             <div class="value-panel">
                 <div>
-                    <p class="eyebrow">About NoorCompass</p>
+                    <p class="eyebrow">02 / Our direction</p>
                     <h2 id="about-title">Small apps, made with intention.</h2>
                     <p class="about-description">NoorCompass is an independent app studio creating focused experiences for learning, play and everyday progress. Each app has a clear purpose and is designed to feel welcoming from the first screen.</p>
                 </div>
@@ -140,7 +150,7 @@
 
         <section class="section shell" id="support" aria-labelledby="support-title">
             <div class="section-heading">
-                <div><p class="eyebrow">Help &amp; legal</p><h2 id="support-title">Find what you need.</h2></div>
+                <div><p class="eyebrow">03 / Here to help</p><h2 id="support-title">A hand along the way.</h2></div>
                 <p>Support, privacy details and account requests for every NoorCompass app.</p>
             </div>
             <div class="support-grid">

@@ -29,7 +29,7 @@
 <main id="main" class="document-main">
     <nav class="page-nav"><a href="index.html">← NoorCompass home</a></nav>
     <h1>Privacy Policy for Whirldrop</h1>
-    <p class="last-updated"><strong>Last updated:</strong> 9 August 2026</p>
+    <p class="last-updated"><strong>Last updated:</strong> 21 September 2026</p>
 
     <div class="section">
         <p>Whirldrop is a casual board game (a drop-and-connect game with rotating
@@ -50,10 +50,12 @@
         challenge progress and unlocked cosmetics. These remain on your device
         unless you later use a leaderboard, online or account feature, at which
         point eligible progress is synchronised as described below.</p>
-        <p><strong>In the cloud (when you use leaderboard, online or account
-        features):</strong> we use <strong>Google Firebase</strong> (Anonymous
-        Authentication + Cloud Firestore). We create an anonymous account with
-        a random identifier. Linked to that identifier we may store:</p>
+        <p><strong>Accounts and cloud features:</strong> we use
+        <strong>Google Firebase</strong> (Anonymous Authentication + Cloud
+        Firestore). The app automatically creates an anonymous guest account
+        with a random identifier when it connects to Firebase. When you use
+        leaderboard, online or account features, we may store the following
+        information linked to that identifier:</p>
         <ul>
             <li>a <strong>username</strong> you choose (a display name shown to
             opponents and on rankings — please don't use your real name or any
@@ -82,8 +84,11 @@
         <p><strong>Reliability and abuse prevention:</strong> Firebase
         Crashlytics may receive crash diagnostics such as device/app version,
         stack traces and technical identifiers. Firebase App Check uses device
-        attestation signals to help reject automated abuse. We do not use these
-        services to build advertising profiles.</p>
+        attestation signals to help reject automated abuse. Firebase
+        Authentication processes IP addresses for security and abuse prevention.
+        If you enable online match notifications, Firebase Cloud Messaging
+        processes an app-installation identifier and notification token to
+        deliver them. We do not use these services to build advertising profiles.</p>
         <p>This data is processed on Google's servers under Google's terms. We
         do not sell it. Advertising data is handled separately by AdMob as
         described in section 6.</p>
@@ -91,12 +96,13 @@
 
     <div class="section">
         <h2>2. What We Do Not Collect</h2>
-        <p>No phone number, real name, contacts, location, or photos. We don't
-        require an email — one is stored only if you opt in to email sign-in
-        (section 1). We run no behavioural analytics of our own. Crash
-        diagnostics are described in section 1. (Our ad provider, Google
-        AdMob, may access a device advertising identifier to serve and measure
-        ads — see section 6.)</p>
+        <p>We do not request your phone number, real name, contacts, photos or
+        precise GPS location. We do not require an email — one is stored only
+        if you opt into email sign-in (section 1). You may choose a country or
+        region for your profile. Our advertising provider may infer approximate
+        location from your IP address; this does not require GPS permission
+        (section 6). We run no behavioural analytics of our own. Crash
+        diagnostics are described in section 1.</p>
     </div>
 
     <div class="section">
@@ -104,15 +110,18 @@
         <p>The app uses Internet access for the optional cloud features and ads
         described above. Two players on one device and play-vs-computer remain
         available when cloud services are unavailable. If you opt into the
-        daily-reward reminder, the app also requests notification permission.</p>
+        daily-reward reminder or online match alerts, the app also requests
+        notification permission.</p>
     </div>
 
     <div class="section">
         <h2>4. Children's Privacy</h2>
         <p>Whirldrop does not knowingly collect personal information from children.
-        The only user-provided data is a freely chosen, non-personal username.
-        There are no in-app purchases. The app shows ads via Google AdMob
-        (section 6).</p>
+        Optional profile and account information is described in section 1;
+        please do not put personal information in a public username. If you
+        believe a child has provided personal information, contact us to request
+        its deletion (section 8). There are no in-app purchases. The app shows
+        ads via Google AdMob (section 6).</p>
     </div>
 
     <div class="section">
@@ -137,9 +146,12 @@
         <p>Whirldrop shows ads through <strong>Google AdMob</strong>: a full-screen
         (interstitial) ad after some online games, and an optional
         <strong>rewarded</strong> ad you can choose to watch to earn cosmetic
-        coins. AdMob
-        is a Google service that may collect and use a device advertising
-        identifier and related data to serve and measure ads, under
+        coins. The Google Mobile Ads SDK may collect and share IP addresses
+        (which can estimate approximate location), app and ad interactions,
+        diagnostic information, and device or other identifiers such as an
+        advertising identifier. Google uses this information to deliver and
+        measure advertising, perform analytics, and prevent fraud and abuse,
+        under
         <a href="https://policies.google.com/technologies/partner-sites">Google's
         policies</a>. In regions that require it (e.g. the EEA/UK) we show a
         consent prompt before any personalised ads. You can reset or limit the

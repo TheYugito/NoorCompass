@@ -29,7 +29,7 @@
 <main id="main" class="document-main">
     <nav class="page-nav"><a href="index.html">← NoorCompass home</a></nav>
     <h1>Privacy Policy for Whirldrop</h1>
-    <p class="last-updated"><strong>Last updated:</strong> 21 September 2026</p>
+    <p class="last-updated"><strong>Last updated:</strong> 24 October 2026</p>
 
     <div class="section">
         <p>Whirldrop is a casual board game (a drop-and-connect game with rotating
@@ -52,9 +52,9 @@
         point eligible progress is synchronised as described below.</p>
         <p><strong>Accounts and cloud features:</strong> we use
         <strong>Google Firebase</strong> (Anonymous Authentication + Cloud
-        Firestore). The app automatically creates an anonymous guest account
-        with a random identifier when it connects to Firebase. When you use
-        leaderboard, online or account features, we may store the following
+        Firestore). When you first use a leaderboard, online or account
+        feature, the app creates an anonymous guest account with a random
+        identifier. When you use those features, we may store the following
         information linked to that identifier:</p>
         <ul>
             <li>a <strong>username</strong> you choose (a display name shown to
@@ -68,8 +68,17 @@
             <li>while an online match is live: the match's rules and the
             <strong>moves played</strong> (column numbers), plus a periodic
             "still connected" timestamp used to detect when a player leaves or
-            loses connection. Match records also contain the participating
-            anonymous account identifiers and display names;</li>
+            loses connection, and a marker recording that you left if you leave
+            a match. Match records also contain the participating anonymous
+            account identifiers and display names;</li>
+            <li>for a guest account, a random <strong>recovery key</strong>
+            created on your device. It is kept on the device and in your
+            account's private cloud storage, which only your account can read,
+            and is used only to restore your ranking if the guest account is
+            removed for inactivity (section 5);</li>
+            <li>if you <strong>report another player</strong>: the report's
+            category, any description you write, the match it concerns and both
+            players' account identifiers, so that we can review it;</li>
             <li><strong>optional email sign-in:</strong> if you choose to sign
             in (purely to save and restore your progress across devices), we
             store your <strong>email address</strong> linked to the account.
@@ -130,15 +139,33 @@
         in the app: <strong>Profile &rarr; Delete account</strong>. This
         removes your profile, username, ranking data, coin counters, cosmetics
         and leaderboard entry, and deletes the underlying authentication account
-        (including a linked email, if any). Short-lived match records are
-        normally deleted when a match finishes or by automated retention; they
-        and service backups/logs may take additional time to disappear. Account
-        deletion cannot be undone. Limited pseudonymous settlement records are
+        (including a linked email, if any), together with reports you made or
+        that concern you and the participant records of matches you played.
+        Match documents are normally deleted when a match finishes or by
+        automated retention; they and service backups/logs may take additional
+        time to disappear. Account deletion cannot be undone. Limited pseudonymous settlement records are
         kept for up to 90 days and then deleted automatically; service logs may
         be retained where needed for fraud prevention, security, or legal
         compliance. Alternatively, you may request deletion by contacting
         us (section 8) with your linked email address (if any), in-app username,
         and approximate creation date.</p>
+        <p><strong>Finished matches:</strong> so that a player can still report
+        a match after it ends, we keep a small record of a finished match's two
+        players (their anonymous account identifiers) for 30 days. It is then
+        deleted automatically, or sooner if either player deletes their
+        account.</p>
+        <p><strong>Inactive guest accounts:</strong> guest accounts without a
+        linked email are deleted automatically after 30 days without activity,
+        or after 180 days if they have a username. Accounts with a linked email
+        are kept. So that the same device can get them back, when a guest
+        account is deleted for inactivity we keep its username, country or
+        region, ranking points and online win/loss/draw record for up to one
+        year, filed under a one-way fingerprint of that account's recovery key
+        (section 1) rather than the account identifier. If the device that
+        holds the key reconnects, they are restored to its new guest account
+        and the record is deleted; otherwise it is deleted automatically after
+        one year. No such record is kept when you delete your account yourself.
+        You can ask us to remove it sooner (section 8).</p>
     </div>
 
     <div class="section">
